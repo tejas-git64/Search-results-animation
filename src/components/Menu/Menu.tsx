@@ -22,7 +22,7 @@ export default function Menu({
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="w-auto h-auto mr-[5.5px] pb-2.5 relative">
+    <div className="w-auto h-auto mr-[5.5px] pb-2.5 relative z-10">
       <button
         type="button"
         onClick={() => setShowMenu(!showMenu)}
