@@ -1,0 +1,142 @@
+[
+  {
+    "name": "John Doe",
+    "image": "https://picsum.photos/50/50",
+    "type": "user",
+    "last_activity": "Active 2d ago",
+    "location": ""
+  },
+  {
+    "name": "Jane Smith",
+    "image": "https://picsum.photos/50/50",
+    "type": "user",
+    "last_activity": "Active",
+    "location": ""
+  },
+  {
+    "name": "Team_Chat_Audio.mp3",
+    "image": "",
+    "type": "audio",
+    "last_activity": "Added 3d ago",
+    "location": "meetings/audio"
+  },
+  {
+    "name": "Project_Design_Folder",
+    "image": "",
+    "type": "folder",
+    "last_activity": "Edited 7d ago",
+    "location": "projects/design"
+  },
+  {
+    "name": "Logo_Draft.png",
+    "image": "",
+    "type": "image",
+    "last_activity": "Edited 1d ago",
+    "location": "assets/images"
+  },
+  {
+    "name": "Team_Meeting_Notes.ogg",
+    "image": "",
+    "type": "audio",
+    "last_activity": "Added 9d ago",
+    "location": "notes/audio"
+  },
+  {
+    "name": "Sprint_Documentation",
+    "image": "",
+    "type": "folder",
+    "last_activity": "Edited 14d ago",
+    "location": "projects/docs"
+  },
+  {
+    "name": "Product_Diagram.jpg",
+    "image": "",
+    "type": "image",
+    "last_activity": "Edited 4d ago",
+    "location": "projects/Diagrams"
+  },
+  {
+    "name": "Michael Lee",
+    "image": "https://picsum.photos/50/50",
+    "type": "user",
+    "last_activity": "Busy",
+    "location": ""
+  },
+  {
+    "name": "Emily Johnson",
+    "image": "https://picsum.photos/50/50",
+    "type": "user",
+    "last_activity": "Active 1d ago",
+    "location": ""
+  },
+  {
+    "name": "Podcast_Episode_1.mp3",
+    "image": "",
+    "type": "audio",
+    "last_activity": "Added 6d ago",
+    "location": "media/podcasts"
+  },
+  {
+    "name": "Company_Assets",
+    "image": "",
+    "type": "folder",
+    "last_activity": "Edited 20d ago",
+    "location": "Assets"
+  },
+  {
+    "name": "Holiday_Photos.png",
+    "image": "",
+    "type": "image",
+    "last_activity": "Edited 11d ago",
+    "location": "Photos"
+  },
+  {
+    "name": "Client_Feedback_Folder",
+    "image": "",
+    "type": "folder",
+    "last_activity": "Edited 8d ago",
+    "location": "Feedback"
+  },
+  {
+    "name": "Interview_Recording.ogg",
+    "image": "",
+    "type": "audio",
+    "last_activity": "Added 15d ago",
+    "location": "clients/interviews"
+  },
+  {
+    "name": "User_Research_Data",
+    "image": "",
+    "type": "folder",
+    "last_activity": "Edited 17d ago",
+    "location": "research/data"
+  },
+  {
+    "name": "Wireframe_Sketch.jpg",
+    "image": "",
+    "type": "image",
+    "last_activity": "Edited 13d ago",
+    "location": "Wireframes"
+  },
+  {
+    "name": "Sarah Connor",
+    "image": "https://picsum.photos/50/50",
+    "type": "user",
+    "last_activity": "Active",
+    "location": ""
+  },
+  {
+    "name": "James Brown",
+    "image": "https://picsum.photos/50/50",
+    "type": "user",
+    "last_activity": "Active",
+    "location": ""
+  },
+  {
+    "name": "Training_Session_Video.mp4",
+    "image": "",
+    "type": "video",
+    "last_activity": "Added 19d ago",
+    "location": "Sessions"
+  }
+]
