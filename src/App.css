@@ -3,3 +3,9 @@
   height: 100dvh;
   text-align: center;
 }
+
+#list-container::-webkit-scrollbar-track,
+#list-container::-webkit-scrollbar,
+#list-container::-webkit-scrollbar-thumb {
+  display: none;
+}
