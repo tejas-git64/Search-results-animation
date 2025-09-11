@@ -33,7 +33,7 @@ export default function SearchBar({
   useEffect(() => {
     function focusSearch(e: KeyboardEvent) {
       if (e.key.toLowerCase() === "s") {
-        e.preventDefault();
+        if (document.activeElement !== searchEl.current) e.preventDefault();
         searchEl.current?.focus();
       }
     }
@@ -64,7 +64,7 @@ export default function SearchBar({
       <div className="w-auto shrink-0 px-2 flex items-center justify-center">
         {isExpanded ? (
           <button
-            className="outline-0 text-xs font-semibold underline cursor-pointer"
+            className="outline-0 text-xs font-semibold border-b-2 cursor-pointer"
             onClick={() => {
               close();
               setIsLoading(false);
