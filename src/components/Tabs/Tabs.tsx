@@ -1,7 +1,28 @@
 import { useState } from "react";
 import Menu from "../Menu/Menu";
+import ListItem from "../ListItem/ListItem";
 
-export default function Tabs() {
+export type Result = {
+  name: string;
+  image: string;
+  type: string;
+  last_activity: string;
+  location: string;
+};
+
+export default function Tabs({
+  query,
+  all,
+  files,
+  people,
+  chats,
+}: {
+  query: string;
+  all: Result[] | null;
+  files: Result[] | null;
+  people: Result[] | null;
+  chats: Result[] | null;
+}) {
   const [index, setIndex] = useState(1);
   const [showFiles, setShowFiles] = useState(true);
   const [showPeople, setShowPeople] = useState(true);
@@ -15,7 +36,7 @@ export default function Tabs() {
           <li
             role="button"
             onClick={() => setIndex(1)}
-            className={`flex items-center justify-start cursor-pointer border-b-3 transition-colors ease-in duration-200 px-1.5 pb-2.5 ${
+            className={`flex items-center justify-start cursor-pointer border-b-3 transition-colors ease-in duration-200 px-1.5 pr-3 pb-2.5 ${
               index === 1 ? "border-black" : "border-white"
             }`}
           >
@@ -26,8 +47,8 @@ export default function Tabs() {
             >
               All
             </p>
-            <p className="text-[12px] text-black bg-[#F1F1F1] text-bold px-1.5 rounded-md">
-              3
+            <p className="text-[12px] w-3 text-black bg-[#F1F1F1] text-bold px-1.5 rounded-md">
+              {all ? all.length : 0}
             </p>
           </li>
           <li
@@ -62,8 +83,8 @@ export default function Tabs() {
             >
               Files
             </p>
-            <p className="text-[12px] text-black bg-[#F1F1F1] text-bold px-1.5 rounded-md">
-              6
+            <p className="text-[12px] w-3 text-black bg-[#F1F1F1] text-bold px-1.5 rounded-md">
+              {files ? files.length : 0}
             </p>
           </li>
           <li
@@ -99,8 +120,8 @@ export default function Tabs() {
             >
               People
             </p>
-            <p className="text-[12px] text-black bg-[#F1F1F1] px-1.5 rounded-md text-bold">
-              2
+            <p className="text-[12px] w-3 text-black bg-[#F1F1F1] px-1.5 rounded-md text-bold">
+              {people ? people.length : 0}
             </p>
           </li>
           <li
@@ -148,8 +169,8 @@ export default function Tabs() {
             >
               Chats
             </p>
-            <p className="text-[12px] text-black bg-[#F1F1F1] px-1.5 rounded-md text-bold">
-              8
+            <p className="text-[12px] w-3 text-black bg-[#F1F1F1] px-1.5 rounded-md text-bold">
+              {chats ? chats.length : 0}
             </p>
           </li>
         </ul>
@@ -164,6 +185,33 @@ export default function Tabs() {
           setShowLists={setShowLists}
         />
       </div>
+      <div className="w-full h-80 max-h-auto [scrollbar-width:none] overflow-y-scroll flex flex-col items-start justify-start space-y-1 pt-3 pb-14 scroll-smooth">
+        {index === 1 &&
+          all?.map((d: Result, i) => (
+            <ListItem key={`${d.name}-${i}`} query={query} {...d} />
+          ))}
+        {index === 2 &&
+          files?.map((d: Result, i) => (
+            <ListItem key={`${d.name}-${i}`} query={query} {...d} />
+          ))}
+        {index === 3 &&
+          people?.map((d: Result, i) => (
+            <ListItem key={`${d.name}-${i}`} query={query} {...d} />
+          ))}
+        {index === 4 &&
+          chats?.map((d: Result, i) => (
+            <ListItem key={`${d.name}-${i}`} query={query} {...d} />
+          ))}
+        {all?.length === 0 && <Fallback name="results" />}
+      </div>
+    </div>
+  );
+}
+
+function Fallback({ name }: { name: string }) {
+  return (
+    <div className="w-full h-72 flex items-center justify-center">
+      <p className="text-sm text-neutral-500">No {name} found</p>
     </div>
   );
 }
