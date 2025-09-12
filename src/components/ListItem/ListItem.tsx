@@ -49,7 +49,7 @@ const ListItem = memo(
               </div>
               <div className="flex w-24 flex-col items-center justify-start text-left">
                 <HightlightedText query={query} value={name} key={name} />
-                <p className="w-full text-[10px] tracking-wide whitespace-nowrap text-neutral-400">
+                <p className="w-full text-[10px] tracking-wide whitespace-nowrap text-neutral-500">
                   {last_activity}
                 </p>
               </div>

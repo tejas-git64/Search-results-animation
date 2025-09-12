@@ -55,7 +55,7 @@ const SearchBar = memo(
           <img
             src={isLoading ? loading : search}
             alt="search-icon"
-            className={`${isLoading ? "mx-3 mt-0.5 w-6" : "mx-2 mt-1 w-8"}`}
+            className={`${isLoading ? "mt-[1px] mr-[10.35px] ml-[13px] w-[22px] opacity-50" : "mt-[5px] mr-1 ml-2 w-9.5"}`}
           />
           <input
             type="search"
