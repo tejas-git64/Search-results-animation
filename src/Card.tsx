@@ -11,23 +11,24 @@ import Tabs, { type Result } from "./components/Tabs/Tabs";
 export default function Card() {
   const [query, setQuery] = useState("");
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState<Result[] | null>(null);
   const deferredQuery = useDeferredValue(query);
   const memoizedData = useMemo(() => {
     const all = data
-      ? data.filter(
-          (d) =>
+      ? data.filter((d) => {
+          return (
             d.location.toLowerCase().includes(deferredQuery) ||
             d.name.toLowerCase().includes(deferredQuery)
-        )
+          );
+        })
       : null;
-
     const files = data
       ? data.filter(
           (d) =>
             !["user", "folder"].includes(d.type) &&
             (d.location.toLowerCase().includes(deferredQuery) ||
-              d.name.toLowerCase().toLowerCase().includes(deferredQuery))
+              d.name.toLowerCase().toLowerCase().includes(deferredQuery)),
         )
       : null;
     const people = data
@@ -35,16 +36,10 @@ export default function Card() {
           (d) =>
             d.type === "user" &&
             (d.location.toLowerCase().includes(deferredQuery) ||
-              d.name.toLowerCase().includes(deferredQuery))
+              d.name.toLowerCase().includes(deferredQuery)),
         )
       : null;
     const chats: Result[] | null = null;
-    console.log({
-      all,
-      files,
-      people,
-      chats,
-    });
     return { all, files, people, chats };
   }, [data, deferredQuery]);
 
@@ -73,18 +68,26 @@ export default function Card() {
 
   return (
     <div
-      className={`w-[435px] ${
-        isExpanded ? "max-h-96 h-96" : "max-h-16 h-16"
-      } transition-[400px] flex flex-col px-2 ease-in-out duration-400 items-start justify-start overflow-y-hidden border-[#CDCDCD] border drop-shadow-lg bg-white rounded-2xl pb-4`}
+      className={`w-[440px] ${
+        isExpanded ? "max-h-[440px]" : "max-h-[64px]"
+      } flex h-auto flex-col items-start justify-start overflow-hidden overflow-y-hidden rounded-2xl border border-[#CDCDCD] bg-white pb-4 drop-shadow-lg transition-[440px] duration-1000 ease-in-out`}
     >
       <SearchBar
         query={query}
+        isLoading={isLoading}
+        setIsLoading={setIsLoading}
         setQuery={setQuery}
         isExpanded={isExpanded}
         setIsExpanded={setIsExpanded}
         close={close}
       />
-      <Tabs query={deferredQuery} {...memoizedData} />
+      <Tabs
+        query={deferredQuery}
+        isLoading={isLoading}
+        isExpanded={isExpanded}
+        setIsLoading={setIsLoading}
+        {...memoizedData}
+      />
     </div>
   );
 }
