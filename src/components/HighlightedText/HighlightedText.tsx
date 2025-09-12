@@ -18,11 +18,11 @@ export default function HightlightedText({
         </span>
       ) : (
         <span key={idx}>{part}</span>
-      )
+      ),
     );
   }
 
   return (
-    <b className="w-full font-semibold text-xs">{getHighlightedLetters()}</b>
+    <b className="w-full text-xs font-semibold">{getHighlightedLetters()}</b>
   );
 }
