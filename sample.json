@@ -7,13 +7,6 @@
     "location": ""
   },
   {
-    "name": "Jane Smith",
-    "image": "https://picsum.photos/50/50",
-    "type": "user",
-    "last_activity": "Active",
-    "location": ""
-  },
-  {
     "name": "Team_Chat_Audio.mp3",
     "image": "",
     "type": "audio",
@@ -26,6 +19,13 @@
     "type": "folder",
     "last_activity": "Edited 7d ago",
     "location": "projects/design"
+  },
+  {
+    "name": "Jane Smith",
+    "image": "https://picsum.photos/50/50",
+    "type": "user",
+    "last_activity": "Active",
+    "location": ""
   },
   {
     "name": "Logo_Draft.png",
