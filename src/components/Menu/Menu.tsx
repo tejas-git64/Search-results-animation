@@ -79,7 +79,7 @@ const Menu = memo(
               onClick={() => setShowFiles(!showFiles)}
               className={`${
                 showFiles ? "bg-black" : "bg-neutral-300"
-              } -mr-0.5 h-3 w-5 rounded-full px-[1.5px] pt-[1.5px] transition-colors`}
+              } -mr-0.5 h-3 w-5 rounded-full px-[1.5px] pt-0.5 transition-colors`}
             >
               <div
                 className={`h-[9px] w-[9px] rounded-full bg-white transition-transform duration-150 ease-in ${
@@ -120,7 +120,7 @@ const Menu = memo(
               onClick={() => setShowPeople(!showPeople)}
               className={`${
                 showPeople ? "bg-black" : "bg-neutral-300"
-              } h-3 w-5 rounded-full px-[1.5px] pt-[1.5px] transition-colors`}
+              } h-3 w-5 rounded-full px-[1.5px] pt-0.5 transition-colors`}
             >
               <div
                 className={`h-[9px] w-[9px] rounded-full bg-white transition-transform duration-150 ease-in ${
@@ -173,7 +173,7 @@ const Menu = memo(
               onClick={() => setShowChats(!showChats)}
               className={`${
                 showChats ? "bg-black" : "bg-neutral-300"
-              } h-3 w-5 rounded-full px-[1.5px] pt-0.5 transition-colors`}
+              } h-3 w-5 rounded-full px-[1.5px] pt-[2.5px] transition-colors`}
             >
               <div
                 className={`-mt-[0.5px] h-[9px] w-[9px] rounded-full bg-white transition-transform duration-150 ease-in ${
@@ -225,7 +225,7 @@ const Menu = memo(
               onClick={() => setShowLists(!showLists)}
               className={`${
                 showLists ? "bg-black" : "bg-neutral-300"
-              } h-3 w-5 rounded-full px-[1.5px] pt-[1.5px] transition-colors`}
+              } h-3 w-5 rounded-full px-[1.5px] pt-0.5 transition-colors`}
             >
               <div
                 className={`h-[9px] w-[9px] rounded-full bg-white transition-transform duration-150 ease-in ${
