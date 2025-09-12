@@ -52,7 +52,7 @@ export default function Card() {
 
   useEffect(() => {
     async function getData() {
-      const res = await fetch("../../sample.json", {
+      const res = await fetch("/sample.json", {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
